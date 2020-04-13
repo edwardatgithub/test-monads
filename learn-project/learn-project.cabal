@@ -1,0 +1,63 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: cfd25561a6dfd4efe22bcee51d6a9c958c71f72e9d5aa422a81d55384c11bc91
+
+name:           learn-project
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/learn-project#readme>
+homepage:       https://github.com/githubuser/learn-project#readme
+bug-reports:    https://github.com/githubuser/learn-project/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/learn-project
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_learn_project
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable learn-project-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_learn_project
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , learn-project
+    , mtl
+  default-language: Haskell2010
+
+test-suite learn-project-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_learn_project
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , learn-project
+  default-language: Haskell2010
